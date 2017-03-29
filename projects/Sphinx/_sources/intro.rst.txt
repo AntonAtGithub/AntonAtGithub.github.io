@@ -1,0 +1,47 @@
+Inledning
+============
+
+Under hösten har Trafikverket tagit fram ett antal rutter på vägnätet i och runt Stockholm där 
+man har möjlighet att visa trafikinformation i form av restider på variabla meddelandeskyltarna. 
+Restiderna beräknas fram av de indatakällor som Trafikverket får in data från. 
+Rutterna startar på en bestämd punkt (A) och slutar på en annan bestämd punkt (B).
+
+Det här är PM:t sammanställer resultat från ett projekt med syfte att kvalitetsbedöma 
+UMS-restider i Stockholmsområdet. Projektet genomfördes hösten 2016.
+
+Rapporten är framtagen av Sweco.
+
+
+Syfte
+-----------------------------
+
+För att säkerställa att de framräknade restiderna, vilka ska visas på informationsskyltar, stämmer någorlunda 
+med verkliga restider ska Trafikverket utföra stickprovsmätningar på ett antal punkter runt om i Stockholm. 
+Dessa jämförs sedan mot beräknade restider för samma tidsperioder.
+
+
+Metod
+-----------------------------
+
+Insamling
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+För att samla in data har tre olika insalmingsmetoder använts.
+
+1. Faktiska restider har samlats in med så kallat "floating cars". Bilar körs i verklig trafik och restider mellan punkt A och B har fångats upp med GPX-loggar. En GPX-logg sparar ett objekts, t.ex. en mobiltelefons position i form av koordinater med en tidstämpel. GPX-loggar kan sedan användas i många syften, t.ex. visa hastighetskurvor över tiden, höjdprofiler med mera. I detta projekt har dock GPX-filerna, framtagna med appen `Open Gpx Tracker <http://wiki.openstreetmap.org/wiki/OpenGpxTracker/>`_ , inledningsvis endast använts för att plocka fram tidsstämpeln från punkt B och subtraherat med tidsstämpeln från punkt A. Resultat är den faktiska restiden. Använda insalmingsapparater: Iphone 5S, Ipad Mini 2, Iphone 6 (samtliga av fabrikat Apple). Noggrannheten: sekundnivå.
+
+2. Trafikverket samlar in restidsdata från olika källor vilka samlas och presenteras med hjälp av ett system vid namn STRESS. Från STRESS har data plockats ut för de relevanta sträckorna på 5-minutsnivå. Noggrannhet: sekundnivå.
+
+3. Google är ett företag som arbetar med avancerad teknologi och verktygen `Google Maps <http://maps.google.se/>`_  och `Waze <http://www.waze.com/>`_ , båda ägda av Google används flitigt av användare världen runt för transporter. Verktygen använder smarta algoritmer för att beräkna fram beräknade restider för resor mellan två punkter. I detta projekt har under vissa tidsperioder restider hämtats från verktygen. Det har genomförts genom att ta fram start- och slutkoordinater och en grafisk validering.
+
+
+Sammanställning, analys och rapport
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+För att sammanställa resultat och genomföra analysen har följande verktyg använts:
+
+1. Microsoft Excel för att kvalitetssäkra data
+2. `Python <https://www.python.org/>`_ för att filtrera data och generera presentationsunderlag
+3. `Google Charts <https://developers.google.com/chart/>`_ för att presentera data (grafer)
+4. `QGIS <http://www.qgis.com/>`_ med tillhörande plugin för generering av kartor (leafletjs)
+5. `Sphinx <http://www.sphinx-doc.org/>`_ för skapa rapporten

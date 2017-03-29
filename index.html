@@ -1,640 +1,201 @@
 <!doctype html>
-<html lang="en">
+<html>
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <link rel="stylesheet" href="css/leaflet.css" /><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"><link rel="stylesheet" href="css/L.Control.Locate.min.css" />
-        <link rel="stylesheet" type="text/css" href="css/qgis2web.css">
-        <link rel="stylesheet" href="css/MarkerCluster.css" />
-        <link rel="stylesheet" href="css/MarkerCluster.Default.css" />
-        <link rel="stylesheet" href="css/leaflet-search.css" />
-        <link rel="stylesheet" href="http://k4r573n.github.io/leaflet-control-osm-geocoder/Control.OSMGeocoder.css" />
-        <link rel="stylesheet" href="css/leaflet.draw.css" />
-        <link rel="stylesheet" href="css/leaflet.measurecontrol.css" />
-        <script src="js/leaflet.js"></script><script src="js/L.Control.Locate.min.js"></script>
-        <script src="js/leaflet-heat.js"></script>
-        <script src="js/leaflet.rotatedMarker.js"></script>
-        <script src="js/OSMBuildings-Leaflet.js"></script>
-        <script src="js/leaflet-hash.js"></script>
-        <script src="js/Autolinker.min.js"></script>
-        <script src="http://k4r573n.github.io/leaflet-control-osm-geocoder/Control.OSMGeocoder.js"></script>
-        <script src="js/leaflet.draw.js"></script>
-        <script src="js/leaflet.measurecontrol.js"></script>
-        <script src="js/leaflet.markercluster.js"></script>
-        <script src="js/leaflet-search.js"></script>
-        <style>
-        html, body, #map {
-            width: 100%;
-            height: 100%;
-            padding: 0;
-            margin: 0;
-        }
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>My portfolio</title>
 
+        <!--
+        Bootstrap
+        BootstrapToggle
+        Jquery (bootstrap requirement)
 
-        </style>
-        <title></title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        -->
+
+        <link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="static/css/bootstrap-toggle.min.css">
+ 	 	<script src="static/js/jquery-3.1.1.min.js"></script>
+  		<script src="static/js/bootstrap.min.js"></script>
+        <script src="static/js/bootstrap-toggle.min.js"></script>
     </head>
-    <body>
-        
+    <body style="background-color:#EFEFEF">
+    	
+        <div class="container">
 
+        <h2>Example projects/project deliverables/methods
+        by <a href="mailto:anton.vanberlekom@sweco.se?Subject=Your%20portfolio" target="_top">Anton van Berlekom</a></h2>
+        <p>Click on the images to try / for more information. Most of the examples are based on Python 2.7/Python 3.X+ (open source) and free online libraries (Google APIs etc).</p>
 
-	<div id="map">
+        <div class="row">
+            <div class="col-md-6">
+            <h3>1. Google Charts</h3>
+              <div class="thumbnail">
+
+                <a href="projects/GoogleCharts/index.html">
+
+                  <img src="static/images/GoogleCharts.png" alt="1" style="width:100%">
+                  <div class="caption">
+                    <p>Creating interactive graphs with Google Charts.
+                    <ul>
+                    <li>Can be used to display fast interactive graphs (applyable filters and commands)</li>
+                    <li>Easy customizable and extremely responsive (quick)</li>
+                    </ul>
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6">
+            <h3>2. Google Maps Api v3</h3>
+              <div class="thumbnail">
+                <a href="projects/GoogleMapsApiV3/index.html">
+                  <img src="static/images/GoogleMapsApiV3.png" alt="2" style="width:100%">
+                  <div class="caption">
+                    <p>Creating interactive maps with Google Maps Api v3</p>
+                    <ul>
+                    <li>Show markers, polylines, polygons in an interactive map</li>
+                    <li>Small size document (often smaller than 1 MB)</li>
+                    <li>Online dependancy</li>
+                    </ul>
+                  </div>
+                </a>
+              </div>
+            </div>
         </div>
 
-        <script src="data/json_UMSDRIPrutterALLA201610100.js"></script>
-        <script src="data/json_grondaljarvakrog1.js"></script>
-        <script src="data/json_skarpnacknybodavag73752.js"></script>
-        <script src="data/json_skarpnacknybodavag2293.js"></script>
-        <script src="data/json_nybodaorbyledenfarsta4.js"></script>
-        <script src="data/json_nybodasodralankenfarsta5.js"></script>
-        <script src="data/json_nybohovvag736.js"></script>
-        <script src="data/json_hjulstanortull7.js"></script>
-        <script src="data/json_hjulstakista8.js"></script>
-        <script src="data/json_sorentorpfredhall9.js"></script>
-        <script src="data/json_nackanortull10.js"></script>
-        <script src="data/json_nackafredhall11.js"></script>
-        <script src="data/json_fittjanyboda12.js"></script>
-        <script src="data/json_fittjajarvakrog13.js"></script>
-        <script src="data/json_fittjanorrtull14.js"></script>
-        <script src="data/json_tumbagrondalE415.js"></script>
-        <script src="data/json_tumbagrondal22616.js"></script>
-        <script>
-        var highlightLayer;
-        function highlightFeature(e) {
-            highlightLayer = e.target;
+        <div class="row">
+            <div class="col-md-6">
+            <h3>3. Sphinx</h3>
+              <div class="thumbnail">
+                <a href="projects/Sphinx/contents.html">
+                  <img src="static/images/Sphinx.png" alt="1" style="width:100%">
+                  <div class="caption">
+                    <p>Creating reports for PDF and HTML in one sweep</p>
+                    <ul>
+                    <li>Combine new interactive tools with PDF-format reports</li>
+                    <li>Low amount of formatting required</li>
+                    </ul>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6">
+            <h3>4. Flask</h3>
+              <div class="thumbnail">
+                <a href="projects/Flask/index.html">
+                  <img src="static/images/Flask.png" alt="2" style="width:100%">
+                  <div class="caption">
+                    <p>Creating graphic user interface (GUI) with Flask</p>
+                    <ul>
+                    <li>Powerful customization options and easy to understand UI</li>
+                    <li>Flask is Python-powered and easily combined with Python-scripts</li>
+                    </ul>
+                  </div>
+                </a>
+              </div>
+            </div>
+        </div>
 
-            if (e.target.feature.geometry.type === 'LineString') {
-              highlightLayer.setStyle({
-                color: '#ffff00',
-              });
-            } else {
-              highlightLayer.setStyle({
-                fillColor: '#ffff00',
-                fillOpacity: 1
-              });
-            }
-        }
-        L.ImageOverlay.include({
-            getBounds: function () {
-                return this._bounds;
-            }
-        });
-        var map = L.map('map', {
-            measureControl:true,
-            zoomControl:true, maxZoom:28, minZoom:11
-        }).fitBounds([[59.2865953263,17.8544246894],[59.4028125762,18.099577183]]);
-        var hash = new L.Hash(map);
-        map.attributionControl.addAttribution('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a>');
-        L.control.locate().addTo(map);
-        var feature_group = new L.featureGroup([]);
-        var bounds_group = new L.featureGroup([]);
-        var raster_group = new L.LayerGroup([]);
-        var basemap0 = L.tileLayer('http://{s}.www.toolserver.org/tiles/bw-mapnik/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
-            maxZoom: 28
-        });
-        basemap0.addTo(map);
-        function setBounds() {
-        }
-        function geoJson2heat(geojson, weight) {
-          return geojson.features.map(function(feature) {
-            return [
-              feature.geometry.coordinates[1],
-              feature.geometry.coordinates[0],
-              feature.properties[weight]
-            ];
-          });
-        }
-        function pop_UMSDRIPrutterALLA201610100(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    layer.setStyle(doStyleUMSDRIPrutterALLA201610100(feature));
+        <div class="row">
+            <div class="col-md-6">
+            <h3>5. Google Maps Travel Time (API)</h3>
+              <div class="thumbnail">
+                <a href="projects/GoogleMapsTT/index.html">
+                  <img src="static/images/GoogleMapsTT.png" alt="1" style="width:100%">
+                  <div class="caption">
+                    <p>Retrieving data from Google Maps API and Waze API</p>
+                    <ul>
+                    <li>Data can be retrieved with fixed intervals from different A to B coordinates</li>
+                    <li>Can be used as a complementary data collection method</li>
+                    </ul>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6">
+            <h3>6. QGIS and webmaps addin</h3>
+              <div class="thumbnail">
+                <a href="projects/Sphinx/map2.html">
+                  <img src="static/images/QGIS.png" alt="2" style="width:100%">
+                  <div class="caption">
+                    <p>Creating maps with QGIS and OpenStreetMap</p>
+                    <ul>
+                    <li>Quickly generates interactive maps in html-format that can be used together with other outputs</li>
+                    <li>Displays *.shp files in an easy to understand and interactive format</li>
+                    </ul>
+                  </div>
+                </a>
+              </div>
+            </div>
+        </div>
 
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table><tr><td colspan="2">' + (feature.properties['Id'] !== null ? Autolinker.link(String(feature.properties['Id'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['Descriptio'] !== null ? Autolinker.link(String(feature.properties['Descriptio'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['OwnerId'] !== null ? Autolinker.link(String(feature.properties['OwnerId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['RegionId'] !== null ? Autolinker.link(String(feature.properties['RegionId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['TypeId'] !== null ? Autolinker.link(String(feature.properties['TypeId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['LengthInMe'] !== null ? Autolinker.link(String(feature.properties['LengthInMe'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['FreeFlowTr'] !== null ? Autolinker.link(String(feature.properties['FreeFlowTr'])) : '') + '</td></tr></table>';
-            layer.bindPopup(popupContent);
-        }
+        <div class="row">
+            <div class="col-md-6">
+            <h3>7. Pandas</h3>
+              <div class="thumbnail">
+                <a href="projects/BigData/index.html">
+                  <img src="static/images/Pandas.png" alt="1" style="width:100%">
+                  <div class="caption">
+                    <p>Analyzing big data with Pandas</p>
+                    <ul>
+                    <li>Python-based library to analyze large amounts of data</li>
+                    <li>Can be combined with other methods described in this page</li>
+                    </ul>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6">
+            <h3>8. Excel</h3>
+              <div class="thumbnail">
+                <a href="projects/Excel/index.html">
+                  <img src="static/images/ExcelForm.png" alt="2" style="width:100%">
+                  <div class="caption">
+                    <p>Collect data with Microsoft Excel</p>
+                    <ul>
+                    <li>An alternative way of collecting information.</li>
+                    <li>Data is gathered with a macro-activated excel file</li>
+                    </ul>
+                  </div>
+                </a>
+              </div>
+            </div>
+        </div>
 
-        function doStyleUMSDRIPrutterALLA201610100(feature) {
-            return {
-                weight: 6.0,
-                color: '#949494',
-                dashArray: '',
-                lineCap: 'square',
-                lineJoin: 'bevel',
-                opacity: 0.305882
-            };
-        }
-        map.createPane('pane_UMSDRIPrutterALLA201610100');
-        map.getPane('pane_UMSDRIPrutterALLA201610100').style.zIndex = 601;
-        var json_UMSDRIPrutterALLA201610100JSON = new L.geoJson(json_UMSDRIPrutterALLA201610100, {
-            pane: 'pane_UMSDRIPrutterALLA201610100',
-            onEachFeature: pop_UMSDRIPrutterALLA201610100,
-            style: doStyleUMSDRIPrutterALLA201610100
-        });
-        bounds_group.addLayer(json_UMSDRIPrutterALLA201610100JSON);
-        feature_group.addLayer(json_UMSDRIPrutterALLA201610100JSON);
-        function pop_grondaljarvakrog1(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    layer.setStyle(doStylegrondaljarvakrog1(feature));
+        <div class="row">
+            <div class="col-md-6">
+            <h3>9. Combining things</h3>
+              <div class="thumbnail">
+                <a href="projects/Automation/index.html">
+                  <img src="static/images/Automating.png" alt="1" style="width:100%">
+                  <div class="caption">
+                    <p>Automating (combining things)</p>
+                    <ul>
+                    <li>By combining the methods described above it is possible to combine collect data, crunch data, display data and report data.</li>
+                    </ul>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!--
+            <div class="col-md-6">
+              <div class="thumbnail">
+                <a href="#">
+                  <img src="#" alt="2" style="width:100%">
+                  <div class="caption">
+                    <p>Collect data with Microsoft Excel</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            -->
+        </div>
 
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table><tr><td colspan="2">' + (feature.properties['Id'] !== null ? Autolinker.link(String(feature.properties['Id'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['Descriptio'] !== null ? Autolinker.link(String(feature.properties['Descriptio'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['OwnerId'] !== null ? Autolinker.link(String(feature.properties['OwnerId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['RegionId'] !== null ? Autolinker.link(String(feature.properties['RegionId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['TypeId'] !== null ? Autolinker.link(String(feature.properties['TypeId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['LengthInMe'] !== null ? Autolinker.link(String(feature.properties['LengthInMe'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['FreeFlowTr'] !== null ? Autolinker.link(String(feature.properties['FreeFlowTr'])) : '') + '</td></tr></table>';
-            layer.bindPopup(popupContent);
-        }
 
-        function doStylegrondaljarvakrog1(feature) {
-            return {
-                weight: 6.0,
-                color: '#eb8a0b',
-                dashArray: '',
-                lineCap: 'square',
-                lineJoin: 'bevel',
-                opacity: 1.0
-            };
-        }
-        map.createPane('pane_grondaljarvakrog1');
-        map.getPane('pane_grondaljarvakrog1').style.zIndex = 602;
-        var json_grondaljarvakrog1JSON = new L.geoJson(json_grondaljarvakrog1, {
-            pane: 'pane_grondaljarvakrog1',
-            onEachFeature: pop_grondaljarvakrog1,
-            style: doStylegrondaljarvakrog1
-        });
-        bounds_group.addLayer(json_grondaljarvakrog1JSON);
-        function pop_skarpnacknybodavag73752(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    layer.setStyle(doStyleskarpnacknybodavag73752(feature));
 
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table><tr><td colspan="2">' + (feature.properties['Id'] !== null ? Autolinker.link(String(feature.properties['Id'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['Descriptio'] !== null ? Autolinker.link(String(feature.properties['Descriptio'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['OwnerId'] !== null ? Autolinker.link(String(feature.properties['OwnerId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['RegionId'] !== null ? Autolinker.link(String(feature.properties['RegionId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['TypeId'] !== null ? Autolinker.link(String(feature.properties['TypeId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['LengthInMe'] !== null ? Autolinker.link(String(feature.properties['LengthInMe'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['FreeFlowTr'] !== null ? Autolinker.link(String(feature.properties['FreeFlowTr'])) : '') + '</td></tr></table>';
-            layer.bindPopup(popupContent);
-        }
-
-        function doStyleskarpnacknybodavag73752(feature) {
-            return {
-                weight: 6.0,
-                color: '#5c7485',
-                dashArray: '',
-                lineCap: 'square',
-                lineJoin: 'bevel',
-                opacity: 1.0
-            };
-        }
-        map.createPane('pane_skarpnacknybodavag73752');
-        map.getPane('pane_skarpnacknybodavag73752').style.zIndex = 603;
-        var json_skarpnacknybodavag73752JSON = new L.geoJson(json_skarpnacknybodavag73752, {
-            pane: 'pane_skarpnacknybodavag73752',
-            onEachFeature: pop_skarpnacknybodavag73752,
-            style: doStyleskarpnacknybodavag73752
-        });
-        bounds_group.addLayer(json_skarpnacknybodavag73752JSON);
-        function pop_skarpnacknybodavag2293(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    layer.setStyle(doStyleskarpnacknybodavag2293(feature));
-
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table><tr><td colspan="2">' + (feature.properties['Id'] !== null ? Autolinker.link(String(feature.properties['Id'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['Descriptio'] !== null ? Autolinker.link(String(feature.properties['Descriptio'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['OwnerId'] !== null ? Autolinker.link(String(feature.properties['OwnerId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['RegionId'] !== null ? Autolinker.link(String(feature.properties['RegionId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['TypeId'] !== null ? Autolinker.link(String(feature.properties['TypeId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['LengthInMe'] !== null ? Autolinker.link(String(feature.properties['LengthInMe'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['FreeFlowTr'] !== null ? Autolinker.link(String(feature.properties['FreeFlowTr'])) : '') + '</td></tr></table>';
-            layer.bindPopup(popupContent);
-        }
-
-        function doStyleskarpnacknybodavag2293(feature) {
-            return {
-                weight: 6.0,
-                color: '#909b74',
-                dashArray: '',
-                lineCap: 'square',
-                lineJoin: 'bevel',
-                opacity: 1.0
-            };
-        }
-        map.createPane('pane_skarpnacknybodavag2293');
-        map.getPane('pane_skarpnacknybodavag2293').style.zIndex = 604;
-        var json_skarpnacknybodavag2293JSON = new L.geoJson(json_skarpnacknybodavag2293, {
-            pane: 'pane_skarpnacknybodavag2293',
-            onEachFeature: pop_skarpnacknybodavag2293,
-            style: doStyleskarpnacknybodavag2293
-        });
-        bounds_group.addLayer(json_skarpnacknybodavag2293JSON);
-        function pop_nybodaorbyledenfarsta4(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    layer.setStyle(doStylenybodaorbyledenfarsta4(feature));
-
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table><tr><td colspan="2">' + (feature.properties['Id'] !== null ? Autolinker.link(String(feature.properties['Id'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['Descriptio'] !== null ? Autolinker.link(String(feature.properties['Descriptio'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['OwnerId'] !== null ? Autolinker.link(String(feature.properties['OwnerId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['RegionId'] !== null ? Autolinker.link(String(feature.properties['RegionId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['TypeId'] !== null ? Autolinker.link(String(feature.properties['TypeId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['LengthInMe'] !== null ? Autolinker.link(String(feature.properties['LengthInMe'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['FreeFlowTr'] !== null ? Autolinker.link(String(feature.properties['FreeFlowTr'])) : '') + '</td></tr></table>';
-            layer.bindPopup(popupContent);
-        }
-
-        function doStylenybodaorbyledenfarsta4(feature) {
-            return {
-                weight: 6.0,
-                color: '#c65995',
-                dashArray: '',
-                lineCap: 'square',
-                lineJoin: 'bevel',
-                opacity: 1.0
-            };
-        }
-        map.createPane('pane_nybodaorbyledenfarsta4');
-        map.getPane('pane_nybodaorbyledenfarsta4').style.zIndex = 605;
-        var json_nybodaorbyledenfarsta4JSON = new L.geoJson(json_nybodaorbyledenfarsta4, {
-            pane: 'pane_nybodaorbyledenfarsta4',
-            onEachFeature: pop_nybodaorbyledenfarsta4,
-            style: doStylenybodaorbyledenfarsta4
-        });
-        bounds_group.addLayer(json_nybodaorbyledenfarsta4JSON);
-        function pop_nybodasodralankenfarsta5(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    layer.setStyle(doStylenybodasodralankenfarsta5(feature));
-
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table><tr><td colspan="2">' + (feature.properties['Id'] !== null ? Autolinker.link(String(feature.properties['Id'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['Descriptio'] !== null ? Autolinker.link(String(feature.properties['Descriptio'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['OwnerId'] !== null ? Autolinker.link(String(feature.properties['OwnerId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['RegionId'] !== null ? Autolinker.link(String(feature.properties['RegionId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['TypeId'] !== null ? Autolinker.link(String(feature.properties['TypeId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['LengthInMe'] !== null ? Autolinker.link(String(feature.properties['LengthInMe'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['FreeFlowTr'] !== null ? Autolinker.link(String(feature.properties['FreeFlowTr'])) : '') + '</td></tr></table>';
-            layer.bindPopup(popupContent);
-        }
-
-        function doStylenybodasodralankenfarsta5(feature) {
-            return {
-                weight: 6.0,
-                color: '#fa114f',
-                dashArray: '',
-                lineCap: 'square',
-                lineJoin: 'bevel',
-                opacity: 1.0
-            };
-        }
-        map.createPane('pane_nybodasodralankenfarsta5');
-        map.getPane('pane_nybodasodralankenfarsta5').style.zIndex = 606;
-        var json_nybodasodralankenfarsta5JSON = new L.geoJson(json_nybodasodralankenfarsta5, {
-            pane: 'pane_nybodasodralankenfarsta5',
-            onEachFeature: pop_nybodasodralankenfarsta5,
-            style: doStylenybodasodralankenfarsta5
-        });
-        bounds_group.addLayer(json_nybodasodralankenfarsta5JSON);
-        function pop_nybohovvag736(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    layer.setStyle(doStylenybohovvag736(feature));
-
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table><tr><td colspan="2">' + (feature.properties['Id'] !== null ? Autolinker.link(String(feature.properties['Id'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['Descriptio'] !== null ? Autolinker.link(String(feature.properties['Descriptio'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['OwnerId'] !== null ? Autolinker.link(String(feature.properties['OwnerId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['RegionId'] !== null ? Autolinker.link(String(feature.properties['RegionId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['TypeId'] !== null ? Autolinker.link(String(feature.properties['TypeId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['LengthInMe'] !== null ? Autolinker.link(String(feature.properties['LengthInMe'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['FreeFlowTr'] !== null ? Autolinker.link(String(feature.properties['FreeFlowTr'])) : '') + '</td></tr></table>';
-            layer.bindPopup(popupContent);
-        }
-
-        function doStylenybohovvag736(feature) {
-            return {
-                weight: 6.0,
-                color: '#7b50c9',
-                dashArray: '',
-                lineCap: 'square',
-                lineJoin: 'bevel',
-                opacity: 1.0
-            };
-        }
-        map.createPane('pane_nybohovvag736');
-        map.getPane('pane_nybohovvag736').style.zIndex = 607;
-        var json_nybohovvag736JSON = new L.geoJson(json_nybohovvag736, {
-            pane: 'pane_nybohovvag736',
-            onEachFeature: pop_nybohovvag736,
-            style: doStylenybohovvag736
-        });
-        bounds_group.addLayer(json_nybohovvag736JSON);
-        function pop_hjulstanortull7(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    layer.setStyle(doStylehjulstanortull7(feature));
-
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table><tr><td colspan="2">' + (feature.properties['Id'] !== null ? Autolinker.link(String(feature.properties['Id'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['Descriptio'] !== null ? Autolinker.link(String(feature.properties['Descriptio'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['OwnerId'] !== null ? Autolinker.link(String(feature.properties['OwnerId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['RegionId'] !== null ? Autolinker.link(String(feature.properties['RegionId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['TypeId'] !== null ? Autolinker.link(String(feature.properties['TypeId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['LengthInMe'] !== null ? Autolinker.link(String(feature.properties['LengthInMe'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['FreeFlowTr'] !== null ? Autolinker.link(String(feature.properties['FreeFlowTr'])) : '') + '</td></tr></table>';
-            layer.bindPopup(popupContent);
-        }
-
-        function doStylehjulstanortull7(feature) {
-            return {
-                weight: 6.0,
-                color: '#55b7f0',
-                dashArray: '',
-                lineCap: 'square',
-                lineJoin: 'bevel',
-                opacity: 1.0
-            };
-        }
-        map.createPane('pane_hjulstanortull7');
-        map.getPane('pane_hjulstanortull7').style.zIndex = 608;
-        var json_hjulstanortull7JSON = new L.geoJson(json_hjulstanortull7, {
-            pane: 'pane_hjulstanortull7',
-            onEachFeature: pop_hjulstanortull7,
-            style: doStylehjulstanortull7
-        });
-        bounds_group.addLayer(json_hjulstanortull7JSON);
-        function pop_hjulstakista8(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    layer.setStyle(doStylehjulstakista8(feature));
-
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table><tr><td colspan="2">' + (feature.properties['Id'] !== null ? Autolinker.link(String(feature.properties['Id'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['Descriptio'] !== null ? Autolinker.link(String(feature.properties['Descriptio'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['OwnerId'] !== null ? Autolinker.link(String(feature.properties['OwnerId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['RegionId'] !== null ? Autolinker.link(String(feature.properties['RegionId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['TypeId'] !== null ? Autolinker.link(String(feature.properties['TypeId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['LengthInMe'] !== null ? Autolinker.link(String(feature.properties['LengthInMe'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['FreeFlowTr'] !== null ? Autolinker.link(String(feature.properties['FreeFlowTr'])) : '') + '</td></tr></table>';
-            layer.bindPopup(popupContent);
-        }
-
-        function doStylehjulstakista8(feature) {
-            return {
-                weight: 6.0,
-                color: '#408367',
-                dashArray: '',
-                lineCap: 'square',
-                lineJoin: 'bevel',
-                opacity: 1.0
-            };
-        }
-        map.createPane('pane_hjulstakista8');
-        map.getPane('pane_hjulstakista8').style.zIndex = 609;
-        var json_hjulstakista8JSON = new L.geoJson(json_hjulstakista8, {
-            pane: 'pane_hjulstakista8',
-            onEachFeature: pop_hjulstakista8,
-            style: doStylehjulstakista8
-        });
-        bounds_group.addLayer(json_hjulstakista8JSON);
-        function pop_sorentorpfredhall9(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    layer.setStyle(doStylesorentorpfredhall9(feature));
-
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table><tr><td colspan="2">' + (feature.properties['Id'] !== null ? Autolinker.link(String(feature.properties['Id'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['Descriptio'] !== null ? Autolinker.link(String(feature.properties['Descriptio'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['OwnerId'] !== null ? Autolinker.link(String(feature.properties['OwnerId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['RegionId'] !== null ? Autolinker.link(String(feature.properties['RegionId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['TypeId'] !== null ? Autolinker.link(String(feature.properties['TypeId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['LengthInMe'] !== null ? Autolinker.link(String(feature.properties['LengthInMe'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['FreeFlowTr'] !== null ? Autolinker.link(String(feature.properties['FreeFlowTr'])) : '') + '</td></tr></table>';
-            layer.bindPopup(popupContent);
-        }
-
-        function doStylesorentorpfredhall9(feature) {
-            return {
-                weight: 6.0,
-                color: '#b0f526',
-                dashArray: '',
-                lineCap: 'square',
-                lineJoin: 'bevel',
-                opacity: 1.0
-            };
-        }
-        map.createPane('pane_sorentorpfredhall9');
-        map.getPane('pane_sorentorpfredhall9').style.zIndex = 610;
-        var json_sorentorpfredhall9JSON = new L.geoJson(json_sorentorpfredhall9, {
-            pane: 'pane_sorentorpfredhall9',
-            onEachFeature: pop_sorentorpfredhall9,
-            style: doStylesorentorpfredhall9
-        });
-        bounds_group.addLayer(json_sorentorpfredhall9JSON);
-        function pop_nackanortull10(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    layer.setStyle(doStylenackanortull10(feature));
-
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table><tr><td colspan="2">' + (feature.properties['Id'] !== null ? Autolinker.link(String(feature.properties['Id'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['Descriptio'] !== null ? Autolinker.link(String(feature.properties['Descriptio'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['OwnerId'] !== null ? Autolinker.link(String(feature.properties['OwnerId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['RegionId'] !== null ? Autolinker.link(String(feature.properties['RegionId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['TypeId'] !== null ? Autolinker.link(String(feature.properties['TypeId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['LengthInMe'] !== null ? Autolinker.link(String(feature.properties['LengthInMe'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['FreeFlowTr'] !== null ? Autolinker.link(String(feature.properties['FreeFlowTr'])) : '') + '</td></tr></table>';
-            layer.bindPopup(popupContent);
-        }
-
-        function doStylenackanortull10(feature) {
-            return {
-                weight: 6.0,
-                color: '#c896d8',
-                dashArray: '',
-                lineCap: 'square',
-                lineJoin: 'bevel',
-                opacity: 1.0
-            };
-        }
-        map.createPane('pane_nackanortull10');
-        map.getPane('pane_nackanortull10').style.zIndex = 611;
-        var json_nackanortull10JSON = new L.geoJson(json_nackanortull10, {
-            pane: 'pane_nackanortull10',
-            onEachFeature: pop_nackanortull10,
-            style: doStylenackanortull10
-        });
-        bounds_group.addLayer(json_nackanortull10JSON);
-        function pop_nackafredhall11(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    layer.setStyle(doStylenackafredhall11(feature));
-
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table><tr><td colspan="2">' + (feature.properties['Id'] !== null ? Autolinker.link(String(feature.properties['Id'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['Descriptio'] !== null ? Autolinker.link(String(feature.properties['Descriptio'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['OwnerId'] !== null ? Autolinker.link(String(feature.properties['OwnerId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['RegionId'] !== null ? Autolinker.link(String(feature.properties['RegionId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['TypeId'] !== null ? Autolinker.link(String(feature.properties['TypeId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['LengthInMe'] !== null ? Autolinker.link(String(feature.properties['LengthInMe'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['FreeFlowTr'] !== null ? Autolinker.link(String(feature.properties['FreeFlowTr'])) : '') + '</td></tr></table>';
-            layer.bindPopup(popupContent);
-        }
-
-        function doStylenackafredhall11(feature) {
-            return {
-                weight: 6.0,
-                color: '#15f24d',
-                dashArray: '',
-                lineCap: 'square',
-                lineJoin: 'bevel',
-                opacity: 1.0
-            };
-        }
-        map.createPane('pane_nackafredhall11');
-        map.getPane('pane_nackafredhall11').style.zIndex = 612;
-        var json_nackafredhall11JSON = new L.geoJson(json_nackafredhall11, {
-            pane: 'pane_nackafredhall11',
-            onEachFeature: pop_nackafredhall11,
-            style: doStylenackafredhall11
-        });
-        bounds_group.addLayer(json_nackafredhall11JSON);
-        function pop_fittjanyboda12(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    layer.setStyle(doStylefittjanyboda12(feature));
-
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table><tr><td colspan="2">' + (feature.properties['Id'] !== null ? Autolinker.link(String(feature.properties['Id'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['Descriptio'] !== null ? Autolinker.link(String(feature.properties['Descriptio'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['OwnerId'] !== null ? Autolinker.link(String(feature.properties['OwnerId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['RegionId'] !== null ? Autolinker.link(String(feature.properties['RegionId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['TypeId'] !== null ? Autolinker.link(String(feature.properties['TypeId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['LengthInMe'] !== null ? Autolinker.link(String(feature.properties['LengthInMe'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['FreeFlowTr'] !== null ? Autolinker.link(String(feature.properties['FreeFlowTr'])) : '') + '</td></tr></table>';
-            layer.bindPopup(popupContent);
-        }
-
-        function doStylefittjanyboda12(feature) {
-            return {
-                weight: 6.0,
-                color: '#86c6fe',
-                dashArray: '',
-                lineCap: 'square',
-                lineJoin: 'bevel',
-                opacity: 1.0
-            };
-        }
-        map.createPane('pane_fittjanyboda12');
-        map.getPane('pane_fittjanyboda12').style.zIndex = 613;
-        var json_fittjanyboda12JSON = new L.geoJson(json_fittjanyboda12, {
-            pane: 'pane_fittjanyboda12',
-            onEachFeature: pop_fittjanyboda12,
-            style: doStylefittjanyboda12
-        });
-        bounds_group.addLayer(json_fittjanyboda12JSON);
-        function pop_fittjajarvakrog13(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    layer.setStyle(doStylefittjajarvakrog13(feature));
-
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table><tr><td colspan="2">' + (feature.properties['Id'] !== null ? Autolinker.link(String(feature.properties['Id'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['Descriptio'] !== null ? Autolinker.link(String(feature.properties['Descriptio'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['OwnerId'] !== null ? Autolinker.link(String(feature.properties['OwnerId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['RegionId'] !== null ? Autolinker.link(String(feature.properties['RegionId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['TypeId'] !== null ? Autolinker.link(String(feature.properties['TypeId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['LengthInMe'] !== null ? Autolinker.link(String(feature.properties['LengthInMe'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['FreeFlowTr'] !== null ? Autolinker.link(String(feature.properties['FreeFlowTr'])) : '') + '</td></tr></table>';
-            layer.bindPopup(popupContent);
-        }
-
-        function doStylefittjajarvakrog13(feature) {
-            return {
-                weight: 6.0,
-                color: '#ce91b9',
-                dashArray: '',
-                lineCap: 'square',
-                lineJoin: 'bevel',
-                opacity: 1.0
-            };
-        }
-        map.createPane('pane_fittjajarvakrog13');
-        map.getPane('pane_fittjajarvakrog13').style.zIndex = 614;
-        var json_fittjajarvakrog13JSON = new L.geoJson(json_fittjajarvakrog13, {
-            pane: 'pane_fittjajarvakrog13',
-            onEachFeature: pop_fittjajarvakrog13,
-            style: doStylefittjajarvakrog13
-        });
-        bounds_group.addLayer(json_fittjajarvakrog13JSON);
-        function pop_fittjanorrtull14(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    layer.setStyle(doStylefittjanorrtull14(feature));
-
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table><tr><td colspan="2">' + (feature.properties['Id'] !== null ? Autolinker.link(String(feature.properties['Id'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['Descriptio'] !== null ? Autolinker.link(String(feature.properties['Descriptio'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['OwnerId'] !== null ? Autolinker.link(String(feature.properties['OwnerId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['RegionId'] !== null ? Autolinker.link(String(feature.properties['RegionId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['TypeId'] !== null ? Autolinker.link(String(feature.properties['TypeId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['LengthInMe'] !== null ? Autolinker.link(String(feature.properties['LengthInMe'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['FreeFlowTr'] !== null ? Autolinker.link(String(feature.properties['FreeFlowTr'])) : '') + '</td></tr></table>';
-            layer.bindPopup(popupContent);
-        }
-
-        function doStylefittjanorrtull14(feature) {
-            return {
-                weight: 6.0,
-                color: '#888ee7',
-                dashArray: '',
-                lineCap: 'square',
-                lineJoin: 'bevel',
-                opacity: 1.0
-            };
-        }
-        map.createPane('pane_fittjanorrtull14');
-        map.getPane('pane_fittjanorrtull14').style.zIndex = 615;
-        var json_fittjanorrtull14JSON = new L.geoJson(json_fittjanorrtull14, {
-            pane: 'pane_fittjanorrtull14',
-            onEachFeature: pop_fittjanorrtull14,
-            style: doStylefittjanorrtull14
-        });
-        bounds_group.addLayer(json_fittjanorrtull14JSON);
-        function pop_tumbagrondalE415(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    layer.setStyle(doStyletumbagrondalE415(feature));
-
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table><tr><td colspan="2">' + (feature.properties['Id'] !== null ? Autolinker.link(String(feature.properties['Id'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['Descriptio'] !== null ? Autolinker.link(String(feature.properties['Descriptio'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['OwnerId'] !== null ? Autolinker.link(String(feature.properties['OwnerId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['RegionId'] !== null ? Autolinker.link(String(feature.properties['RegionId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['TypeId'] !== null ? Autolinker.link(String(feature.properties['TypeId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['LengthInMe'] !== null ? Autolinker.link(String(feature.properties['LengthInMe'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['FreeFlowTr'] !== null ? Autolinker.link(String(feature.properties['FreeFlowTr'])) : '') + '</td></tr></table>';
-            layer.bindPopup(popupContent);
-        }
-
-        function doStyletumbagrondalE415(feature) {
-            return {
-                weight: 6.0,
-                color: '#503099',
-                dashArray: '',
-                lineCap: 'square',
-                lineJoin: 'bevel',
-                opacity: 1.0
-            };
-        }
-        map.createPane('pane_tumbagrondalE415');
-        map.getPane('pane_tumbagrondalE415').style.zIndex = 616;
-        var json_tumbagrondalE415JSON = new L.geoJson(json_tumbagrondalE415, {
-            pane: 'pane_tumbagrondalE415',
-            onEachFeature: pop_tumbagrondalE415,
-            style: doStyletumbagrondalE415
-        });
-        bounds_group.addLayer(json_tumbagrondalE415JSON);
-        function pop_tumbagrondal22616(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    layer.setStyle(doStyletumbagrondal22616(feature));
-
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table><tr><td colspan="2">' + (feature.properties['Id'] !== null ? Autolinker.link(String(feature.properties['Id'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['Descriptio'] !== null ? Autolinker.link(String(feature.properties['Descriptio'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['OwnerId'] !== null ? Autolinker.link(String(feature.properties['OwnerId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['RegionId'] !== null ? Autolinker.link(String(feature.properties['RegionId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['TypeId'] !== null ? Autolinker.link(String(feature.properties['TypeId'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['LengthInMe'] !== null ? Autolinker.link(String(feature.properties['LengthInMe'])) : '') + '</td></tr><tr><td colspan="2">' + (feature.properties['FreeFlowTr'] !== null ? Autolinker.link(String(feature.properties['FreeFlowTr'])) : '') + '</td></tr></table>';
-            layer.bindPopup(popupContent);
-        }
-
-        function doStyletumbagrondal22616(feature) {
-            return {
-                weight: 6.0,
-                color: '#9991e8',
-                dashArray: '',
-                lineCap: 'square',
-                lineJoin: 'bevel',
-                opacity: 1.0
-            };
-        }
-        map.createPane('pane_tumbagrondal22616');
-        map.getPane('pane_tumbagrondal22616').style.zIndex = 617;
-        var json_tumbagrondal22616JSON = new L.geoJson(json_tumbagrondal22616, {
-            pane: 'pane_tumbagrondal22616',
-            onEachFeature: pop_tumbagrondal22616,
-            style: doStyletumbagrondal22616
-        });
-        bounds_group.addLayer(json_tumbagrondal22616JSON);
-        raster_group.addTo(map);
-        feature_group.addTo(map);
-        var osmGeocoder = new L.Control.OSMGeocoder({
-            collapsed: false,
-            position: 'topright',
-            text: 'Search',
-        });
-        osmGeocoder.addTo(map);
-        var baseMaps = {'OSM B&W': basemap0};
-        L.control.layers(baseMaps,{'<img src="legend/tumbagrondal22616.png" /> tumba-grondal-226': json_tumbagrondal22616JSON,'<img src="legend/tumbagrondalE415.png" /> tumba-grondal-E4': json_tumbagrondalE415JSON,'<img src="legend/fittjanorrtull14.png" /> fittja-norrtull': json_fittjanorrtull14JSON,'<img src="legend/fittjajarvakrog13.png" /> fittja-jarvakrog': json_fittjajarvakrog13JSON,'<img src="legend/fittjanyboda12.png" /> fittja-nyboda': json_fittjanyboda12JSON,'<img src="legend/nackafredhall11.png" /> nacka-fredhall': json_nackafredhall11JSON,'<img src="legend/nackanortull10.png" /> nacka-nortull': json_nackanortull10JSON,'<img src="legend/sorentorpfredhall9.png" /> sorentorp-fredhall': json_sorentorpfredhall9JSON,'<img src="legend/hjulstakista8.png" /> hjulsta-kista': json_hjulstakista8JSON,'<img src="legend/hjulstanortull7.png" /> hjulsta-nortull': json_hjulstanortull7JSON,'<img src="legend/nybohovvag736.png" /> nybohov-vag73': json_nybohovvag736JSON,'<img src="legend/nybodasodralankenfarsta5.png" /> nyboda-sodralanken-farsta': json_nybodasodralankenfarsta5JSON,'<img src="legend/nybodaorbyledenfarsta4.png" /> nyboda-orbyleden-farsta': json_nybodaorbyledenfarsta4JSON,'<img src="legend/skarpnacknybodavag2293.png" /> skarpnack-nyboda-vag229': json_skarpnacknybodavag2293JSON,'<img src="legend/skarpnacknybodavag73752.png" /> skarpnack-nyboda-vag73-75': json_skarpnacknybodavag73752JSON,'<img src="legend/grondaljarvakrog1.png" /> grondal-jarvakrog': json_grondaljarvakrog1JSON,'<img src="legend/UMSDRIPrutterALLA201610100.png" /> UMS DRIP-rutter ALLA 20161010': json_UMSDRIPrutterALLA201610100JSON,},{collapsed:false}).addTo(map);
-        setBounds();
-        map.addControl(new L.Control.Search({
-            layer: feature_group,
-            initial: false,
-            hideMarkerOnCollapse: true,
-            propertyName: 'Id'}));
-        </script>
+        </div>
     </body>
 </html>

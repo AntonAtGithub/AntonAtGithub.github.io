@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>My portfolio</title>
+
+        <!--
+        Bootstrap
+        BootstrapToggle
+        Jquery (bootstrap requirement)
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        -->
+
+        <link rel="stylesheet" type="text/css" href="../../static/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../static/css/bootstrap-toggle.min.css">
+ 	 	<script src="../../static/js/jquery-3.1.1.min.js"></script>
+  		<script src="../../static/js/bootstrap.min.js"></script>
+        <script src="../../static/js/bootstrap-toggle.min.js"></script>
+    </head>
+    <body style="background-color:#EFEFEF">
+    	
+        <div class="container">
+
+        <h2>Flask UI</h2>
+        <p>Example of creating GUI with Python, Flask, HTML, Bootstrap and Javascript</p>
+
+
+
+
+<form method=post enctype=multipart/form-data>
+
+  
+  <h3>Filter</h3>
+
+    <div class="row">
+      <div class="col-sm-6">
+
+        <div class="form-group">
+        <label for="exampleSelect1">Välj projekt</label>
+        <!-- Might need to build an if to stop many projects from showing in list
+        -->
+        <select multiple class="form-control" name="Select1" size="{{projectlist|length + 1}}">
+        <option selected>option1</option>
+
+          <option>option2</option>
+          <option>option3</option>
+          <option>option4</option>
+
+        </select>
+        </div>
+
+      </div>
+    </div>
+  
+  <h3>Övrigt</h3>
+
+  <h3>Inställningar</h3>
+
+  <h4>Kommentarer</h4>
+  <label><input type="checkbox" name="option1" checked data-toggle="toggle" data-on="Ja" data-off="Nej" data-onstyle="success" data-offstyle="danger"> Inkludera kommentarer</label><br>
+
+  <h4>Grafik</h4>
+  <label><input type="checkbox" name="option2" unchecked data-toggle="toggle" data-on="Ja" data-off="Nej" data-onstyle="success" data-offstyle="danger"> Inkludera bilder</label><br>
+  <label><input type="checkbox" name="option3" unchecked data-toggle="toggle" data-on="Ja" data-off="Nej" data-onstyle="success" data-offstyle="danger"> Inkludera geografisk placering (Gmaps)</label><br>
+  <label><input type="checkbox" name="option4" checked data-toggle="toggle" data-on="Ja" data-off="Nej" data-onstyle="success" data-offstyle="danger"> Inkludera frekvensgrafer</label><br>
+
+  <h4>Format</h4>
+  <label><input type="checkbox" name="option5" unchecked data-toggle="toggle" data-on="Ja" data-off="Nej" data-onstyle="success" data-offstyle="danger"> Inkludera HTML-rapport</label><br>
+
+  <hr>
+
+  <button type="submit" class="btn btn-primary btn-block" value=Upload id="hideshow">Skapa rapport</button>
+
+
+
+
+</form>
+
+
+
+        </div>
+    </body>
+</html>

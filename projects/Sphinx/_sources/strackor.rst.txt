@@ -1,0 +1,366 @@
+.. highlightlang:: python
+
+Fakta om sträckorna
+====================
+
+Totalt sett testades 15 sträckor i Stockholmsregionen. Många av sträckorna ”överlappar” och kan således samlas in med metoden "floating car" samtidigt.
+
+.. figure:: images/statistik/oversikt.png
+	:scale: 80 %
+
+	Sträckor och antal körningar med floating car. Framtagen med Google Charts.
+
+
+
+Stockholm Norr
+------------------
+
+UMS Hjulsta
+^^^^^^^^^^^^^^^^^^^^^^
+
+Med utgångspunkt UMS Hjulsta utvärderades två sträckor:
+
+* Sträcka 1: Hjulsta - Kista 
+* Sträcka 2: Hjulsta - Norrtull 
+
+==================   =====================   ==========
+Parameter            Värde                   Länk [L] /Källa [K]
+==================   =====================   ==========
+Start/Slut           Hjulsta - Kista         `Sträcka 1`_ [L]
+Längd                5,5 km                  Google [K]
+Restid fritt flöde   4 min                   Google [K] 
+Startkoordinater     59.404030,17.869674     \-
+Slutkoordinater      59.395455,17.950843     \-
+==================   =====================   ==========
+
+.. _Sträcka 1: https://www.google.se/maps/dir/59.404030,17.869674/59.395455,17.950843/
+
+.. figure:: images/strackor/Hjulsta_Kista.png
+	:scale: 50 %
+
+	Kartvy över sträckningen. Framtagen med QGIS, visualiserad med Leaflet OpenStreetMap, zoom:12.
+
+==================   =====================   ==========
+Parameter            Värde                   Länk [L] /Källa [K]
+==================   =====================   ==========
+Start/Slut           Hjulsta - Norrtull      `Sträcka 2`_ [L]
+Längd                14,0 km                 Google [K]
+Restid fritt flöde   10 min                  Google [K] 
+Startkoordinater     59.404030,17.869674     \-
+Slutkoordinater      59.3510032,18.0414381   \-
+==================   =====================   ==========
+
+
+
+.. _Sträcka 2: https://www.google.se/maps/dir/59.404030,17.869674/59.3510032,18.0414381/
+
+.. figure:: images/strackor/Hjulsta_Norrtull.png
+	:scale: 90 %
+
+	Kartvy över sträckningen. Framtagen med QGIS, visualiserad med Leaflet OpenStreetMap, zoom:12.
+
+UMS Sörentorp
+^^^^^^^^^^^^^^^^^^^^^^
+
+==================   =====================   ==========
+Parameter            Värde                   Länk [L] /Källa [K]
+==================   =====================   ==========
+Start/Slut           Sörentorp - Fredhäll    `Sträcka 3`_ [L]  
+Längd                8,9 km                  Google [K]
+Restid fritt flöde   7 min                   Google [K]
+Startkoordinater     59.390035,17.996491     \-
+Slutkoordinater      59.329624,18.009400     \-
+==================   =====================   ==========
+
+.. _Sträcka 3: https://www.google.se/maps/dir/59.390035,17.996491/59.329624,18.009400/
+
+
+.. figure:: images/strackor/Sorentorp_Fredhall.png
+	:scale: 60 %
+
+	Kartvy över sträckningen. Framtagen med QGIS, visualiserad med Leaflet OpenStreetMap, zoom:13.
+
+
+
+Stockholm Syd
+------------------
+
+UMS Fittja
+^^^^^^^^^^^^^^^^^^^^^^
+
+Med utgångspunkt UMS Fittja utvärderades två sträckor:
+
+* Sträcka 6: Fittja - Järva Krog
+* Sträcka 7: Fittja - Norrtull 
+
+==================   =====================   ==========
+Parameter            Värde                   Länk [L] /Källa [K]
+==================   =====================   ==========
+Start/Slut           Fittja - Järva Krog     `Sträcka 6`_ [L]  
+Längd                23,7 km                 Google [K]
+Restid fritt flöde   17 min                  Google [K]
+Startkoordinater     59.24781,17.84478       \-
+Slutkoordinater      59.378292,18.013003     \-
+==================   =====================   ==========
+
+.. _Sträcka 6: https://www.google.se/maps/dir/59.24781,17.84478/59.378292,18.013003/
+
+.. figure:: images/strackor/Fittja_JarvaKrog.png
+	:scale: 90 %
+
+	Kartvy över sträckningen. Framtagen med QGIS, visualiserad med Leaflet OpenStreetMap, zoom:12.
+
+
+==================   =====================   ==========
+Parameter            Värde                   Länk [L] /Källa [K]
+==================   =====================   ==========
+Start/Slut           Fittja - Norrtull       `Sträcka 7`_ [L]  
+Längd                19,9 km                 Google [K]
+Restid fritt flöde   14 min                  Google [K]
+Startkoordinater     59.24781,17.84478       \-
+Slutkoordinater      59.349164,18.037131     \-
+==================   =====================   ==========
+
+.. _Sträcka 7: https://www.google.se/maps/dir/59.24781,17.84478/59.349164,18.037131/
+
+
+.. figure:: images/strackor/Fittja_Norrtull.png
+	:scale: 90 %
+
+	Kartvy över sträckningen. Framtagen med QGIS, visualiserad med Leaflet OpenStreetMap, zoom:12.
+
+
+UMS Gröndal
+^^^^^^^^^^^^^^^^^^^^^^
+
+==================   =====================   ==========
+Parameter            Värde                   Länk [L] /Källa [K]
+==================   =====================   ==========
+Start/Slut           Gröndal - Järva Krog    `Sträcka 8`_ [L]  
+Längd                9,5 km                  Google [K]
+Restid fritt flöde   7 min                   Google [K]
+Startkoordinater     59.31345,18.00456       \-
+Slutkoordinater      59.378292,18.013003     \-
+==================   =====================   ==========
+
+.. _Sträcka 8: https://www.google.se/maps/dir/59.31345,18.00456/59.378292,18.013003/
+
+
+.. figure:: images/strackor/Grondal_JarvaKrog.png
+	:scale: 90 %
+
+	Kartvy över sträckningen. Framtagen med QGIS, visualiserad med Leaflet OpenStreetMap, zoom:13.
+
+
+UMS Nacka
+^^^^^^^^^^^^^^^^^^^^^^
+
+Med utgångspunkt UMS Nyboda utvärderades två sträckor:
+
+* Sträcka 9: Nacka - Fredhäll
+* Sträcka 10: Nacka - Norrtull 
+
+==================   =====================   ==========
+Parameter            Värde                   Länk [L] /Källa [K]
+==================   =====================   ==========
+Start/Slut           Nacka - Fredhäll        `Sträcka 9`_ [L]  
+Längd                13,0 km                 Google [K]
+Restid fritt flöde   10 min                  Google [K]
+Startkoordinater     59.312143,18.168656     \-
+Slutkoordinater      59.3291857,18.0094029     \-
+==================   =====================   ==========
+
+.. _Sträcka 9: https://www.google.se/maps/dir/59.312143,18.168656/59.3291857,18.0094029/
+
+
+.. figure:: images/strackor/Nacka_Fredhall.png
+	:scale: 90 %
+
+	Kartvy över sträckningen. Framtagen med QGIS, visualiserad med Leaflet OpenStreetMap, zoom:12.
+
+
+==================   =====================   ==========
+Parameter            Värde                   Länk [L] /Källa [K]
+==================   =====================   ==========
+Start/Slut           Nacka - Norrtull        `Sträcka 10`_ [L]  
+Längd                16,6 km                 Google [K]
+Restid fritt flöde   13 min                  Google [K]
+Startkoordinater     59.312143,18.168656     \-
+Slutkoordinater      59.349164,18.037131     \-
+==================   =====================   ==========
+
+.. _Sträcka 10: https://www.google.se/maps/dir/59.312143,18.168656/59.349164,18.037131/
+
+
+.. figure:: images/strackor/Nacka_Norrtull.png
+	:scale: 90 %
+
+	Kartvy över sträckningen. Framtagen med QGIS, visualiserad med Leaflet OpenStreetMap, zoom:12.
+
+
+
+UMS Nyboda
+^^^^^^^^^^^^^^^^^^^^^^
+
+Med utgångspunkt UMS Nyboda utvärderades två sträckor:
+
+11. Nyboda - Farsta (229)
+12. Nyboda - Farsta (73)
+
+==================   ========================   ==========
+Parameter            Värde                      Länk [L] /Källa [K]
+==================   ========================   ==========
+Start/Slut           Nyboda - Farsta (229)      `Sträcka 11`_ [L]  
+Längd                10,1 km                    Google [K]
+Restid fritt flöde   11 min                     Google [K]
+Startkoordinater     59.297737,18.030265        \-
+Slutkoordinater      59.245503,18.103708        \-
+==================   ========================   ==========
+
+.. _Sträcka 11: https://www.google.se/maps/dir/59.297737,18.030265/59.245503,18.103708/
+
+.. figure:: images/strackor/Nyboda_Farsta_7375.png
+	:scale: 90 %
+
+	Kartvy över sträckningen. Framtagen med QGIS, visualiserad med Leaflet OpenStreetMap, zoom:13.
+
+
+==================   ========================   ==========
+Parameter            Värde                      Länk [L] /Källa [K]
+==================   ========================   ==========
+Start/Slut           Nyboda - Farsta (73)       `Sträcka 12`_ [L]  
+Längd                8,8 km                     Google [K]
+Restid fritt flöde   7 min                      Google [K]
+Startkoordinater     59.297737,18.030265        \-
+Slutkoordinater      59.245503,18.103708        \-
+==================   ========================   ==========
+
+.. _Sträcka 12: https://www.google.se/maps/dir/59.297737,18.030265/59.245503,18.103708/
+
+.. figure:: images/strackor/Nyboda_Farsta_229.png
+	:scale: 90 %
+
+	Kartvy över sträckningen. Framtagen med QGIS, visualiserad med Leaflet OpenStreetMap, zoom:13.
+
+
+
+UMS Nybohov
+^^^^^^^^^^^^^^^^^^^^^^
+
+==================   ========================   ==========
+Parameter            Värde                      Länk [L] /Källa [K]
+==================   ========================   ==========
+Start/Slut           Nybohov - Väg 73           `Sträcka 13`_ [L]  
+Längd                6,8 km                     Google [K]
+Restid fritt flöde   5 min                      Google [K]
+Startkoordinater     59.31694,18.00049          \-
+Slutkoordinater      59.28701,18.08842          \-
+==================   ========================   ==========
+
+.. _Sträcka 13: https://www.google.se/maps/dir/59.31694,18.00049/59.28701,18.08842/
+
+.. figure:: images/strackor/Nybohov_Vag73.png
+	:scale: 90 %
+
+	Kartvy över sträckningen. Framtagen med QGIS, visualiserad med Leaflet OpenStreetMap, zoom:13.
+
+
+
+
+UMS Skarpnäck/Farsta
+^^^^^^^^^^^^^^^^^^^^^^
+
+Med utgångspunkt UMS Skarpnäck/Farsta utvärderades fyra sträckor:
+
+* Sträcka 4: Farsta - Nyboda (73)
+* Sträcka 5: Farsta - Nyboda (229) 
+* Sträcka 15: Skarpnäck - Nyboda (229)
+* Sträcka 16: Skarpnäck - Nyboda (73) 
+ 
+==================   ========================   ==========
+Parameter            Värde                      Länk [L] /Källa [K]
+==================   ========================   ==========
+Start/Slut           Skarpnäck - Nyboda (229)   `Sträcka 15`_ [L]  
+Längd                8,3 km                     Google [K]
+Restid fritt flöde   7 min                      Google [K]
+Startkoordinater     59.261958,18.120285        \-
+Slutkoordinater      59.297886,18.030435        \-
+==================   ========================   ==========
+
+.. _Sträcka 15: https://www.google.se/maps/dir/59.261958,18.120285/59.297886,18.030435/
+
+
+.. figure:: images/strackor/Skarpnack_Nyboda_7375.png
+	:scale: 90 %
+
+	Kartvy över sträckningen. Framtagen med QGIS, visualiserad med Leaflet OpenStreetMap, zoom:13.
+
+
+==================   =======================   ==========
+Parameter            Värde                     Länk [L] /Källa [K]
+==================   =======================   ==========
+Start/Slut           Skarpnäck - Nyboda (73)   `Sträcka 16`_ [L]  
+Längd                9,8 km                    Google [K]
+Restid fritt flöde   10 min                    Google [K]
+Startkoordinater     59.261958,18.120285       \-
+Slutkoordinater      59.297886,18.030435       \-
+==================   =======================   ==========
+
+.. _Sträcka 16: https://www.google.se/maps/dir/59.261958,18.120285/59.297886,18.030435/
+
+
+.. figure:: images/strackor/Skarpnack_Nyboda_229.png
+	:scale: 90 %
+
+	Kartvy över sträckningen. Framtagen med QGIS, visualiserad med Leaflet OpenStreetMap, zoom:13.
+
+
+
+
+UMS Tumba
+^^^^^^^^^^^^^^^^^^^^^^
+
+Med utgångspunkt UMS Skarpnäck/Farsta utvärderades fyra sträckor:
+
+* Sträcka 17: Tumba - Gröndal (E4)
+* Sträcka 18: Tumba - Gröndal (226)
+
+==================   =======================   ==========
+Parameter            Värde                     Länk [L] /Källa [K]
+==================   =======================   ==========
+Start/Slut           Tumba - Gröndal (E4)      `Sträcka 17`_ [L]  
+Längd                20,8 km                   Google [K]
+Restid fritt flöde   17 min                    Google [K]
+Startkoordinater     59.197051,17.834491       \-
+Slutkoordinater      59.31345,18.00456         \-
+==================   =======================   ==========
+
+.. _Sträcka 17: https://www.google.se/maps/dir/59.197051,17.834491/59.31345,18.00456/
+
+
+.. figure:: images/strackor/Tumba_Grondal_E4.png
+	:scale: 90 %
+
+	Kartvy över sträckningen. Framtagen med QGIS, visualiserad med Leaflet OpenStreetMap, zoom:12.
+
+
+==================   =======================   ==========
+Parameter            Värde                     Länk [L] /Källa [K]
+==================   =======================   ==========
+Start/Slut           Tumba - Gröndal (E4)      `Sträcka 18`_ [L]  
+Längd                21,2 km                   Google [K]
+Restid fritt flöde   23 min                    Google [K]
+Startkoordinater     59.197051,17.834491       \-
+Slutkoordinater      59.31345,18.00456         \-
+==================   =======================   ==========
+
+.. _Sträcka 18: https://www.google.se/maps/dir/59.197051,17.834491/59.31345,18.00456/
+
+
+.. figure:: images/strackor/Tumba_Grondal_226.png
+	:scale: 90 %
+
+	Kartvy över sträckningen. Framtagen med QGIS, visualiserad med Leaflet OpenStreetMap, zoom:12.
+
+
+

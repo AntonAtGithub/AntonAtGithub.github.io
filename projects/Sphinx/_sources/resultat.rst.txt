@@ -1,0 +1,188 @@
+.. highlightlang:: python
+
+Resultat och analys
+====================
+
+Statistik överblick
+-------------------
+
+Av de genomförda 145 resorna med floating cars matchades 112 resor mot Stress varav 80 resor Stress, Google och Waze.
+En jämföresle av medelavvikelsen visar på att STRESS ger den mest korrekta restiden (jmf med floating car).
+Medellängden på resorna var 15 minuter och avvikelserna från medelresan representeras nedan:
+Restidsfelet är större på resor under rusningstid.
+
+==================   =====================
+Källa                Medelavvikelse                
+==================   =====================
+Stress               ~ 1.8 minuter / 108 sekunder      
+Google               ~ 2.0 minuter / 120 sekunder              
+Waze                 ~ 2.1 minuter / 126 sekunder                
+==================   =====================
+
+.. figure:: images/statistik/oversikt2.png
+	:scale: 80 %
+
+	Medelavvikelser från floating cars.
+
+
+
+Utvalda Restidsgrafer
+-----------------------
+
+I detta kapitel visas ett par mer delaljerade grafer över restider. Slutsatserna baseras i stor del till de iakttagelser som går att göra utifrån graferna nedan. Graferna nedan har i huvudsyfte att illustrera hur väl STRESS (blå), Google (röd) och Waze(gul) uppskattar de restider som samlades in med floating car (grön triangel). Notera att grafernas y-axel (restiden) justeras efter dataunderlaget. 
+
+Kommentar: Google data har plockats fram på minutnivå. Det kan ge en effekt där grafen "hoppar" mellan två tal, exempelvis 7 och 8 medan STRESS och Waze dataunderlag är på sekundnivå.
+
+Gröndal - Järva Krog
+^^^^^^^^^^^^^^^^^^^^^^
+
+Gröndal - Järva Krog är en sträcka i centrala Stockholm (se Fakta om sträckorna för mer detaljer) med återkommande köuppbyggnad.
+För sträckan i fråga samlades många mätpunkter in via floating car. Den 29 november (se graf 1 och 2) kan en viss överskattning av restider att läsa av. Den 1 december (se graf 3) inträffade en incident runt 14:00, vilket gav upphov till en köuppbildning som stabiliserades runt 16.00 (början av eftermiddagsrusningen).
+
+==================   =====================   ==========
+Längd                9,5 km                  Källa: Google
+Restid fritt flöde   7 min                   Källa: Google
+==================   =====================   ==========
+
+Graf 1: 29 november 2016    
+
+.. figure:: images/statistik/grondal_jarvakrog_29nov.PNG
+	:scale: 90 %
+
+	Restider med diverse källor. Sträcka: Gröndal - Järva Krog. Datum: 29 november.
+
+Graf 2: 29 november förmiddag 2016    
+
+.. figure:: images/statistik/grondal_jarvakrog_29nov_fm.PNG
+	:scale: 90 %
+
+	Restider med diverse källor. Sträcka: Gröndal - Järva Krog. Datum: 29 november (förmiddag).
+
+Graf 3: 1 december 2016         
+
+.. figure:: images/statistik/grondal_jarvakrog_1dec.PNG
+	:scale: 90 %
+
+	Restider med diverse källor. Sträcka: Gröndal - Järva Krog. Datum: 1 deceber.
+
+
+Nacka - Fredhäll
+^^^^^^^^^^^^^^^^^^^^^^
+För sträckan Nacka - Fredhäll samlades data endast in från STRESS. Grafen (se graf 4) visar en tisdagsmorgonsrusning in mot Stockholm.
+STRESS (blå) har även här lyckats med att uppskatta restider i närheten av de insamlingar som genomfördes med floating car (grön triangel).
+
+==================   =====================   ==========
+Längd                13,0 km                 Källa: Google
+Restid fritt flöde   10 min                  Källa: Google
+==================   =====================   ==========
+
+Graf 4: 29 november 2016    
+
+.. figure:: images/statistik/nacka_fredhall_29nov.PNG
+	:scale: 90 %
+
+	Restider med diverse källor. Sträcka: Nacka - Fredhäll. Datum: 29 november.
+
+
+Nyboda - Farsta (via 73)
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+För sträckan Nyboda - Farsta via Södra Länken (väg 73) upptäcktes en större avvikelse.
+STRESS samlar in data från olika källor och efter att ha granskat data från BlipTrack (Bluetooth + WIFI) 
+och MCS (Motorway Control System) kan avvikelsen förklaras av att restiderna hämtas huvudsakligen från MCS (där restiderna beräknas
+fram av medelhastigheten genom punkthastigheter under MCS-portalerna). I Södra Länkens avfart till väg 73 byggs det under rusningstider dock upp en kö för ett specifikt körfält (medan övriga körfält flyter på). Detta gör att restidsuppskattningen blir mycket lägre än verkliga restiden. Om data istället skulle plockas från BlipTrack skulle troligen restiderna (under rusning) justeras till det bättre. Se gröna trianglar mellan 16.00-18.00 i graf 5 och 6 nedan.
+
+==================   =====================   ==========
+Längd                8,8 km                  Källa: Google
+Restid fritt flöde   7 min                   Källa: Google
+==================   =====================   ==========
+
+Graf 5: 28 november 2016    
+
+.. figure:: images/statistik/nyboda_farsta_73_28nov.PNG
+	:scale: 90 %
+
+	Restider med diverse källor. Sträcka: Nyboda - Farsta (via 73). Datum: 28 november.
+
+Graf 6: 29 november 2016    
+
+.. figure:: images/statistik/nyboda_farsta_73_29nov.PNG
+	:scale: 90 %
+
+	Restider med diverse källor. Sträcka: Nyboda - Farsta (via 73). Datum: 29 november.
+
+
+Sörentorp - Fredhäll
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+För sträckan Sörentorp - Fredhäll, i stort samma sträckning som Gröndal - Järva Krog men i motsatt riktning upptäcktes en större avvikelse
+av Waze (gul) den 1 december mellan 15.00 - 19.00 (se graf 8). Waze-data samlades in genom att ange start- och slutkoordinater. Den söker därefter den snabbaste vägen och visar restid och väg till föraren. I detta fall har Waze upptäckt en snabbare väg och visar därför reducerade restider.
+Instruktionen till förarna av floating cars (grön triangel) har varit att följa vägen längs E4, den väg STRESS baserar restiderna på. 
+
+Sörentorp Fredhäll 
+==================   =====================   ==========
+Längd                8,9 km                  Källa: Google
+Restid fritt flöde   7 min                   Källa: Google
+==================   =====================   ==========
+
+Graf 7: 29 november (förmiddag) 2016    
+
+.. figure:: images/statistik/sorentorp_fredhall_29nov_fm.PNG
+	:scale: 90 %
+
+	Restider med diverse källor. Sträcka: Sörentorp - Fredhäll. Datum: 29 november (förmiddag).
+
+Graf 8: 1 december 2016    
+
+.. figure:: images/statistik/sorentorp_fredhall_1dec.PNG
+	:scale: 90 %
+
+	Restider med diverse källor. Sträcka: Sörentorp - Fredhäll. Datum: 1 december.
+
+
+Tumba - Gröndal (via E4)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Slutligen visas grafer för Tumba - Gröndal. Vid Tumba ställs föraren för ett vägval (om slutmålet är Gröndal eller vidare längs E4:an norrut) mellan E4:an och väg 226. I fritt flöde är vägen via E4:an enligt Google 6 minuter snabbare. Vid en noggrannera granskning går det att se att STRESS har överskattat restiderna aningen jämfört med Waze och Google (se graf 9 och graf 11). Det kan antas bero på att restidsuppskattning kommer med en förskjutning (den uppdateras inte tillräckligt snabbt). Flyttas linjerna (blå, röd och gul) i sidled vänster (se graf 11) stämmer restiderna bättre överens med verkligheten.
+En möjlig förklaring kan vara avståndet mellan insamlinsgpunkterna med BlipTrack.
+
+==================   =====================   ==========
+Längd                20,8 km                 Källa: Google
+Restid fritt flöde   17 min                  Källa: Google
+==================   =====================   ==========
+
+Graf 9: 1 december 2016 (förmiddag)
+
+.. figure:: images/statistik/tumba_grondal_e4_1dec_fm.PNG
+	:scale: 90 %
+
+	Restider med diverse källor. Sträcka: Tumba - Gröndal (via E4). Datum: 1 december (förmiddag).
+
+
+Tumba - Gröndal (via 226)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+==================   =====================   ==========
+Längd                21,2 km                 Källa: Google
+Restid fritt flöde   23 min                  Källa: Google
+==================   =====================   ==========
+
+Graf 10: 1 december 2016        
+
+.. figure:: images/statistik/tumba_grondal_226_1dec.PNG
+	:scale: 90 %
+
+	Restider med diverse källor. Sträcka: Tumba - Gröndal (via 226). Datum: 1 december 2016.
+
+Graf 11: Datum: 1 december (förmiddag).   
+
+.. figure:: images/statistik/tumba_grondal_226_1dec_fm.PNG
+	:scale: 90 %
+
+	Restider med diverse källor. Sträcka: Tumba - Gröndal (via 226). Datum: 1 december (förmiddag).
+
+
+Sammanfattning
+-------------------
+
+I detta kapitel har statistik och restidsgrafer visats för STRESS, Google, Waze och floating car. Huvudsyftet med den här rapporten är att ställa STRESS mot floating car och se hur väl systemet står sig. Mot Google och Waze (privata företag med egna algoritmer) visar STRESS vara sig den vassaste vid jämförelse mot den insamlade restider som genomfördes med floating car. Insamlingsmängden är dock begränsad och felmarginalerna sinsemellan är tämligen små. Med det sagt skulle Google eller Waze data ge en likadan upplevelse för trafikanter. Det fel STRESS, Google och Waze fångar upp är allra störst under rusningstider och oväntade incidenter och det är även då behovet är som störst. Restidsuppskattningarna är dock definivt bättre än att visa restider utan flöde.

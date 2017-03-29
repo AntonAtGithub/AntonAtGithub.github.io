@@ -1,0 +1,16 @@
+.. highlightlang:: python
+
+Slutsatser
+====================
+
+Nedan sammanfattas ett antal slutsatser kopplade till syftet med rapporten. 
+
+1. De framräknade restiderna (STRESS) som ska visas på informationsskyltarna stämmer tämligen bra överens med de restider som samlats in med floating car (egna restidsmätningar med bil). Medelfelet är dock nära 2 minuter med en snittresa på 15 minuter och ger större utslag vid rusningstider.
+
+2. Jämfört med Google och Waze (egna algoritmer) visar STRESS vara sig den vassaste. Skillnaderna är dock små.
+
+3. Det finns ett behov att gå igenom sträckor där data samlas in från MCS och köbildning kan uppstå i ett körfält (ex. Nyboda - Farsta via väg 73). Ett bättre alternativ är förmodligen att använda BlipTrack för detta.
+
+
+
+
